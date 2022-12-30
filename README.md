@@ -25,7 +25,7 @@ this command will create a file "dataset_prepared.jsonl"
 ```bash
 openai api fine_tunes.create -t "dataset_prepared.jsonl" -m ada
 ```
-this command will provide a model name (ex:curie:ft-personal-2022-12-30-04-51-12)
+this command will provide a model name
 
 ## Example Usage
 
