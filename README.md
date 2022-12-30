@@ -28,7 +28,7 @@ openai api fine_tunes.create -t "dataset_prepared.jsonl" -m ada
 ```
 this command will provide a model name
 
-## Example Usage
+## Usage
 
 ```bash
 python run_model.py --fine_tuned_model <YOUR_MODEL_NAME>
