@@ -23,8 +23,12 @@ def _get_df():
 def _adjust_prompt(pv_pre):
     """Adjust prompt to train gpt3"""
     for i in range(NUM_TRAIN_DATA+NUM_TEST_DATA):
-        pv_pre.at[i, 'text'] = pv_pre.iloc[i]['text'] + "\nSummary:"
+        pv_pre.at[i, 'text'] = _create_prompt(pv_pre.iloc[i]['text'])
     return pv_pre
+
+def _create_prompt(text):
+    """Given text, create a prompt"""
+    return text + "\nSummary:"
 
 def _get_train_data(pv_pre):
     """Create jsonl file with data for training."""
